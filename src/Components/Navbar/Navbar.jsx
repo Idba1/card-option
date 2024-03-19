@@ -1,11 +1,12 @@
 import { useState } from "react";
 import Link from "../../Link/Link";
 import { RiMenu2Line } from "react-icons/ri";
+import { IoIosClose } from "react-icons/io";
 
 
 const Navbar = () => {
 
-    const [close, setClose] = useState(false)
+    const [close, setClose] = useState(true)
 
     const routes =[
         { path: "/", name: "Home", id: 1 },
@@ -18,11 +19,10 @@ const Navbar = () => {
     return (
         <div>
 
-            <div  className="md:flex text-2xl md:hidden" onClick={()=>setClose(!close)}>
+            <div  className="md:flex text-2xl" onClick={()=>setClose(!close)}>
                 {
-                    close===(true)? 'open' : 'close'
+                    close===(true)?<RiMenu2Line className=" md:hidden"/> : <IoIosClose className=" md:hidden"/>
                 }
-            <RiMenu2Line className="" />
             </div>
             <ul>
             {
