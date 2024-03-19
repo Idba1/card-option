@@ -8,6 +8,6 @@ const Link = ({route}) => {
 
 export default Link;
 
-Link.PropTypes = {
+Link.propTypes = {
     route : PropTypes.object
 }
