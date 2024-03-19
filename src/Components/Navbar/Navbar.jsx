@@ -1,3 +1,7 @@
+import Link from "../../Link/Link";
+import { RiMenu2Line } from "react-icons/ri";
+
+
 const Navbar = () => {
 
     const routes =[
@@ -10,9 +14,10 @@ const Navbar = () => {
       
     return (
         <div>
+            <RiMenu2Line className="text-2xl md:hidden" />
             <ul className="md:flex">
             {
-                routes.map(route =>  <li className="mr-10" key={route.id}><a href={route.path}>{route.name}</a></li>)
+                routes.map(route =>  <Link key={route.id} route={route}></Link>)
             }
             </ul>
         </div>
