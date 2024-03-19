@@ -19,14 +19,14 @@ const Navbar = () => {
     return (
         <div className="text-black">
 
-            <div  className="md:flex bg-yellow-200 text-2xl p-6" onClick={()=>setClose(!close)}>
+            <div  className="lg:flex bg-yellow-200 text-2xl p-6" onClick={()=>setClose(!close)}>
                 {
-                    close===(true)?<RiMenu2Line className=" md:hidden"/> : <IoIosClose className=" md:hidden"/>
+                    close===(true)?<RiMenu2Line className=" lg:hidden"/> : <IoIosClose className=" lg:hidden"/>
                 }
             </div>
-            <ul className={`"md:flex bg-yellow-200 duration-1000 absolute md:static 
+            <ul className={`lg:flex bg-yellow-200 duration-1000 absolute lg:static 
             ${close? '-top-60':'top-16'}
-            md:pb-6 px-6"`}>
+            lg:pb-6 px-6`}>
             {
                 routes.map(route =>  <Link key={route.id} route={route}></Link>)
             }
